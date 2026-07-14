@@ -3,8 +3,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="ChoiceMates: Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions. IUI 2026." />
 
-<meta property="og:title" content="ChoiceMates: Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions" />
-<meta property="og:description" content="An interactive multi-agent system where users orchestrate LLM agents — instead of agents automating the decision for them." />
+<meta property="og:title" content="ChoiceMates" />
+<meta property="og:description" content="Website for IUI 2026 paper: ChoiceMates: Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="assets/teaser.png" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -188,10 +188,10 @@
     <p class="eyebrow">From a 14-participant formative study</p>
     <h2>Design goals</h2>
     <ul class="dg-list">
-      <li><span class="dg-id">DG1</span><span>Provide diverse opinions and perspectives in the domain <span class="dg-highlight">through experiences</span>.</span></li>
-      <li><span class="dg-id">DG2</span><span>Provide <span class="dg-highlight">options to explore</span> broad and contextually relevant domain information.</span></li>
-      <li><span class="dg-id">DG3</span><span>Allow for <span class="dg-highlight">direct exchanges of information needs</span> through conversational interactions.</span></li>
-      <li><span class="dg-id">DG4</span><span>Facilitate users in <span class="dg-highlight">building preferences</span> relative to the domain.</span></li>
+      <li><span class="dg-id">DG1</span><span>Provide diverse opinions and perspectives in the domain <strong>through experiences</strong>.</span></li>
+      <li><span class="dg-id">DG2</span><span>Provide <strong>options to explore</strong> broad and contextually relevant domain information.</span></li>
+      <li><span class="dg-id">DG3</span><span>Allow for <strong>direct exchanges of information needs</strong> through conversational interactions.</span></li>
+      <li><span class="dg-id">DG4</span><span>Facilitate users in <strong>building preferences</strong> relative to the domain.</span></li>
     </ul>
   </section>
 
@@ -245,10 +245,12 @@
         </div>
       </div>
       <p>
-        In ChoiceMates, there are three unique interactions users can do with the agents. Users can (1) chat with any agents currently in the space, (2) select
-        specific agents to respond, or (3) call new agents in. Beyond user-agent interaction, agents can also respond to each other -
-        agreeing, disagreeing, or asking follow-up questions — including when the user asks them to
-        debate.
+        In ChoiceMates, there are three unique interactions users can do with the agents. Users can
+        (1) <strong>chat with any agents</strong> currently in the space, (2)
+        <strong>select specific agents</strong> to respond, or (3)
+        <strong>call new agents in</strong>. Beyond user-agent interaction, agents
+        can also respond to each other - agreeing, disagreeing, or asking follow-up questions —
+        including when the user asks them to debate.
       </p>
     </div>
 
@@ -406,18 +408,33 @@
 
     <h3>How people used the agents</h3>
     <p class="prose">
-      Across the sessions, four dominant strategies emerged for orchestrating ChoiceMates. Early on,
-      participants <strong>talked to all agents</strong> to get a first read on the domain, relying on
-      ChoiceMates' response logic and on overhearing agent-agent exchanges to pick up context they
-      hadn't asked for directly. Once they had their bearings, they <strong>tagged multiple agents</strong>
-      at once to compare them quickly, often asking a tagged group to "debate" or "tell me more." When
-      one agent's profile felt closest to their own situation, they <strong>conversed with that one
-      agent in depth</strong> — P10 spent 4 of 10 turns with a single agent, asking follow-ups beyond
-      its opening pitch. And whenever the current agents didn't reflect their preferences well enough,
-      participants <strong>called in more agents</strong> by asking "any other agents?", both to widen
-      the space and to double-check they hadn't missed an option.
+      Across the sessions, four dominant strategies emerged for orchestrating ChoiceMates.
     </p>
-
+    <ul class="takeaways">
+      <li>
+        <strong>Talked to all agents first</strong> to get a read on the domain. Particants relied on
+        ChoiceMates' response logic and on overhearing agent-agent exchanges to pick up context they
+        hadn't asked for directly. Many of such conversations included the user’s situation or preferences, 
+        such as P2 (climbing shoes)’s utterance "Ok. then let’s focus on the fact that I am a beginner."
+      </li>
+      <li>
+        <strong>Tagged multiple agents to compare</strong> once they had a decent understanding of the domain. Participants here often asked
+        a tagged group to "debate" or "tell me more." This also re-flected the mental space of how many options participants had in mind, 
+        where P1’s (climbing shoes) tagged number of agents went from 4, 3, 4, and 3 respectively throughout the process.
+      </li>
+      <li>
+        <strong>Went deep with one relevant agent</strong> when its profile felt closest to their own
+        situation. P10 spent 4 of 10 turns with a single agent (Jordan), asking follow-ups beyond its opening
+        pitch. P10's conversation not only contained specific questions ("Are there any color options?") or elicitation of preferences ("I am leaning towards your device."), 
+        but also asked for the experience behind it (“How long have you used it?”), expecting the answer from Jordan’s profile.
+      </li>
+      <li>
+        <strong>Called in more agents</strong> whenever the current ones didn't reflect their
+        preferences well enough, by asking "any other agents?" This was both to widen the space and to
+        double-check they hadn't missed an option.
+      </li>
+    </ul>
+    <div></div>
     <h3>Reliability</h3>
     <p class="prose">
       We also checked the reliability of the agents' responses with a small-scale hallucination
