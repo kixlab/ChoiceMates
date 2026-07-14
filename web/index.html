@@ -80,7 +80,7 @@
     <div class="tldr-box">
       <span class="tldr-tag">TL;DR</span>
       <ul>
-        <li>Unfamiliar decisions require <strong>learning a domain and forming preferences at the same time</strong> — existing tools assume you've already done one or the other. <a href="#motivation">See the gap →</a></li>
+        <li>Unfamiliar decisions require <strong>learning a domain and forming preferences at the same time</strong> — existing tools assume you've already done one or the other. <a href="#motivation">See the motivation →</a></li>
         <li><strong>ChoiceMates</strong> lets you converse with a dynamic set of LLM agents — chat with all of them, tag a subset, or call in more — instead of having agents automate the decision for you. <a href="#system">See the system →</a></li>
         <li>In a within-subjects study (n=12), ChoiceMates led to <strong>better self-understanding and information organization</strong> than web search and <strong>higher decision quality</strong> than a commercial multi-agent framework. <a href="#results">See the results →</a></li>
         <!-- <li>Orchestrating agents built <strong>agency, not just efficiency</strong>. On the other hand, treating agents as a memorable, human-like unit of information <strong>showcases pros and cons</strong>. <a href="#discussion">See the discussion →</a></li> -->
@@ -130,7 +130,7 @@
     <div class="fig-img" style="margin-top:24px;">
       <img src="assets/fig1-teaser.png" alt="Figure 1: ChoiceMates interface showing the conversation space, conversation history, and preference space" />
     </div>
-    <p style="font-size:13px; color:var(--ink-muted); margin-top:10px;">
+    <p style="font-size:15px; color:var(--ink-muted); margin-top:10px;">
       <strong style="color:var(--ink)">Figure 1.</strong> The user converses with agents in the
       <strong>conversation space (1)</strong> to gather diverse perspectives, tracks discovered
       <span class="tag">criteria</span> and <span class="tag option">options</span> in the
@@ -143,24 +143,24 @@
 
   <!-- WHY MULTI-AGENT -->
   <section class="wrap" id="motivation">
-    <p class="eyebrow">The gap</p>
-    <h2>Comparing perspectives</h2>
+    <p class="eyebrow">Motivation</p>
+    <h2>Comparing perspectives in <span class="tag">unfamiliar decision-making</span></h2>
     <p class="prose">
       Understanding an unfamiliar domain means assembling scattered sources yourself, one at
-      a time. Multiple agents can surface diverse viewpoints in parallel, and conversation makes
-      follow-up questions cheap.
+      a time. This is especially difficult for novices, who constantly have to juggle between general knowledge and one's own preferences in the domain without personalized standards. 
+      Existing tools introduce an easier way of comparing different options, provide an overview, or present a likely preferred choice, where they assume both knowledge and preferences are already constructed.
     </p>
 
     <div class="compare">
       <div class="col">
         <div class="label">Today</div>
         <ul>
-          <li>Review blog</li>
-          <li>YouTube review</li>
-          <li>Product grid</li>
-          <li>Forum thread</li>
+          <li>Review blogs</li>
+          <li>Summary videos</li>
+          <li>Product grids on e-commerce</li>
+          <li>Forum threads</li>
         </ul>
-        ...and if these don't work out, need to reach out to an expert.
+        ...and if these don't work out, need to reach out to an expert that are not always accessible.
       </div>
       <div class="rule"></div>
       <div class="col">
@@ -171,6 +171,11 @@
         </ul>
       </div>
     </div>
+
+    <p class="prose">
+      Our approach brings in <span class="tag">conversational interactions with multiple agents</span>, where multiple agents can surface diverse viewpoints in parallel, and conversation makes
+      follow-up questions cheap.
+    </p>
 
     <p class="thesis-line">
       Most existing multi-agent systems <b class="automate">automate</b>. Instead, we want the user to
@@ -219,10 +224,9 @@
       </div>
       
       <p>
-        Each agent bundles a one-line descriptor (e.g. "professional photographer"), the
+        Each agent contains a one-line descriptor (e.g. "professional photographer"), the
         <span class="tag">criteria</span> it weighs, and a single <span class="tag option">option</span>
-        it prefers. Hovering an agent's icon reveals this full profile — a criterion always arrives
-        attached to a lived reason and a real choice, not a floating fact.
+        it prefers. Hovering an agent's icon reveals this full profile. This was designed to connect lived perspectives to options through a bridging characteristic: criteria.
       </p>
     </div>
 
@@ -233,8 +237,8 @@
         <img src="assets/fig4-orchestrate.png" alt="Figure 4: three types of conversation interactions — chat with all agents, tag a subset, and call new agents into the space" />
       </div>
       <p>
-        Users can chat with any agents currently in the space, select
-        specific agents to respond, or call new agents in. Agents can also respond to each other —
+        In ChoiceMates, there are three unique interactions users can do with the agents. Users can (1) chat with any agents currently in the space, (2) select
+        specific agents to respond, or (3) call new agents in. Beyond user-agent interaction, agents can also respond to each other -
         agreeing, disagreeing, or asking follow-up questions — including when the user asks them to
         debate.
       </p>
@@ -246,6 +250,7 @@
         <img src="assets/fig5-history.png" style="width:50%; margin-left:25%;" alt="Figure 5: the conversation history showing agents, criteria, and options automatically appended. The user can hide or pin agents, criteria, and options to the preference space." />
       </div>
       <p>
+        In order to help users organize the information found throughout the process, on the side of the conversation space we keep a conversation history section.
         As agents talk, ChoiceMates automatically lists every agent, <span class="tag">criterion</span>,
         and <span class="tag option">option</span> mentioned, each with a running count. Hovering a
         criterion highlights the agents and options connected to it, and agents or keywords can be
@@ -265,10 +270,10 @@
         <img src="assets/fig6-toggle.png" alt="Figure 5: consequences of the preference toggle, showing the same question producing generic vs. preference-aligned agent responses" />
       </div>
       <p>
-        With the toggle <strong>off (1)</strong>, the preference space is
-        hidden from agents and "any other agents?" returns generic newcomers. With it
-        <strong>on (2)</strong>, the same question returns agents aligned to the criteria and
-        options already pinned — the broad ↔ relevant switch from DG2.
+        With the toggle button <strong>off (1)</strong>, the preference space is
+        hidden from agents and "any other agents?" brings in more serendipitous, broader scope of agents. With it
+        <strong>on (2)</strong>, the same question brings in agents aligned to agents, criteria, and
+        options already pinned. This allows the users to nagivate between broad and relevant information in the space (DG2).
       </p>
     </div>
   </section>
@@ -302,7 +307,7 @@
       </div>
 
       <div class="bar-group">
-        <div class="metric-name">Organize &amp; structure unfamiliar information</div>
+        <div class="metric-name">Organize &amp; structure unfamiliar information <span class="ns">p < 0.05</span></div>
         <div class="bar-row">
           <div class="series-name">ChoiceMates</div>
           <div class="bar-track"><div class="bar-fill" style="width:83%;background:var(--accent)"></div></div>
@@ -310,13 +315,13 @@
         </div>
         <div class="bar-row">
           <div class="series-name">Web</div>
-          <div class="bar-track"><div class="bar-fill" style="width:49%;background:var(--muted-bar)"></div></div>
+          <div class="bar-track"><div class="bar-fill" style="width:49%;background:var(--web)"></div></div>
           <div class="value">3.42</div>
         </div>
       </div>
 
       <div class="bar-group">
-        <div class="metric-name">Understand my own situation</div>
+        <div class="metric-name">Understand my own situation <span class="ns">p < 0.05</span></div>
         <div class="bar-row">
           <div class="series-name">ChoiceMates</div>
           <div class="bar-track"><div class="bar-fill" style="width:89%;background:var(--accent)"></div></div>
@@ -324,7 +329,7 @@
         </div>
         <div class="bar-row">
           <div class="series-name">Web</div>
-          <div class="bar-track"><div class="bar-fill" style="width:61%;background:var(--muted-bar)"></div></div>
+          <div class="bar-track"><div class="bar-fill" style="width:61%;background:var(--web)"></div></div>
           <div class="value">4.25</div>
         </div>
       </div>
@@ -352,7 +357,7 @@
       <p class="chart-sub">Broader exploration, higher perceived decision quality</p>
 
       <div class="bar-group">
-        <div class="metric-name">Search actions</div>
+        <div class="metric-name">Search actions <span class="ns">p < 0.01</span></div>
         <div class="bar-row">
           <div class="series-name">ChoiceMates</div>
           <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--accent)"></div></div>
@@ -366,7 +371,7 @@
       </div>
 
       <div class="bar-group">
-        <div class="metric-name">Decision quality</div>
+        <div class="metric-name">Decision quality <span class="ns">p < 0.05</span></div>
         <div class="bar-row">
           <div class="series-name">ChoiceMates</div>
           <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--accent)"></div></div>
@@ -391,8 +396,8 @@
       </blockquote>
     </div>
 
-    <p class="hallu-note">
-      Reliability check — over 439 agent messages: 1.8% objective inaccuracy, 2.9% subjective
+    <p class="prose">
+      We also checked the reliability of the agents' responses by performing a hallucination analysis. Through analyzing the 439 agent messages from the study, we found 1.8% objective inaccuracy, 2.9% subjective
       inaccuracy, 4.8% irrelevant responses, 1.1% self-contradiction.
     </p>
   </section>
@@ -423,16 +428,24 @@
     <h2>BibTeX</h2>
     <div class="bibtex-box">
       <button class="copy-btn" id="copy-bibtex">Copy</button>
-      <pre id="bibtex-text">@inproceedings{park2026choicemates,
-  author    = {Park, Jeongeon and Min, Bryan and Son, Kihoon and Song, Jean Y. and Ma, Xiaojuan and Kim, Juho},
-  title     = {ChoiceMates: Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions},
-  booktitle = {Proceedings of the 31st International Conference on Intelligent User Interfaces},
-  series    = {IUI '26},
-  year      = {2026},
-  location  = {Paphos, Cyprus},
-  publisher = {ACM},
-  doi       = {10.1145/3742413.3789107},
-  url       = {https://doi.org/10.1145/3742413.3789107}
+      <pre id="bibtex-text">@inproceedings{10.1145/3742413.3789107,
+        author = {Park, Jeongeon and Min, Bryan and Son, Kihoon and Song, Jean Y and Ma, Xiaojuan and Kim, Juho},
+        title = {ChoiceMates: Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions},
+        year = {2026},
+        isbn = {9798400719844},
+        publisher = {Association for Computing Machinery},
+        address = {New York, NY, USA},
+        url = {https://doi.org/10.1145/3742413.3789107},
+        doi = {10.1145/3742413.3789107},
+        abstract = {From purchasing a gift to deciding on a hobby, unfamiliar decisions—decisions without domain knowledge and experience—are frequent and significant. The complexity and uncertainty of such decisions demand unique approaches to information seeking, understanding, and decision-making. Our formative study highlights that in the current workflow, users want to start by discovering broad and relevant domain information evenly and simultaneously, quickly address emerging inquiries, and gain personalized standards to assess information found. We present ChoiceMates, an interactive multi-agent system designed to address these needs by enabling users to engage with a dynamic set of LLM agents each presenting a unique experience in the domain. Unlike existing multi-agent systems that automate tasks with agents, the user orchestrates agents to assist their decision-making process in each turn, through chatting with all agents, with a tagged subset of agents, or calling in new agents into the space. By comparing ChoiceMates with a web search condition and a multi-agent framework (n=12), we show that ChoiceMates enables a more confident, satisfactory decision-making with better situation understanding than web search, and higher decision quality than a commercial multi-agent framework. We further illustrate how participants utilized ChoiceMates to make unfamiliar decisions, providing insights into designing a more controllable and collaborative multi-agent system.},
+        booktitle = {Proceedings of the 31st International Conference on Intelligent User Interfaces},
+        pages = {1526–1550},
+        numpages = {25},
+        keywords = {multi-agent interactions, conversational user interface, decision-making support, large-language models},
+        location = {
+        },
+        series = {IUI '26}
+        }
 }</pre>
     </div>
   </section>
