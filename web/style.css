@@ -76,7 +76,7 @@ em {
 
 .hero {
   padding-top: 72px;
-  padding-bottom: 40px;
+  padding-bottom: 28px;
   text-align: center;
 }
 
@@ -134,7 +134,7 @@ em {
 }
 
 .author {
-  width: 92px;
+  width: 110px;
 }
 
 .author img {
@@ -151,6 +151,7 @@ em {
   font-size: 13px;
   font-weight: 600;
   line-height: 1.3;
+  white-space: nowrap;
 }
 
 .author-name a {
@@ -168,7 +169,6 @@ em {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 48px;
 }
 
 .btn {
@@ -383,14 +383,15 @@ h3 {
   padding: 2px 7px;
 }
 
+.dg-highlight {
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+
 /* ---------- system walkthrough (figure blocks) ---------- */
 
 .figure-block {
   padding: 36px 0;
-}
-
-.figure-block + .figure-block {
-  border-top: 1px solid var(--hairline);
 }
 
 .figure-block .dg-id {
@@ -425,6 +426,10 @@ h3 {
   overflow: hidden;
   background: var(--surface);
   margin: 16px 0;
+}
+
+.prose + .figure-block {
+  padding-top: 4px;
 }
 
 .figure-block .fig-img.narrow {
@@ -565,7 +570,7 @@ blockquote.quote cite {
 
 .hallu-note {
   margin-top: 8px;
-  font-size: 13px;
+  font-size: 14.5px;
   color: var(--ink-muted);
 }
 

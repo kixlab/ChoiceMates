@@ -83,9 +83,29 @@
         <li>Unfamiliar decisions require <strong>learning a domain and forming preferences at the same time</strong> — existing tools assume you've already done one or the other. <a href="#motivation">See the gap →</a></li>
         <li><strong>ChoiceMates</strong> lets you converse with a dynamic set of LLM agents — chat with all of them, tag a subset, or call in more — instead of having agents automate the decision for you. <a href="#system">See the system →</a></li>
         <li>In a within-subjects study (n=12), ChoiceMates led to <strong>better self-understanding and information organization</strong> than web search and <strong>higher decision quality</strong> than a commercial multi-agent framework. <a href="#results">See the results →</a></li>
+        <!-- <li>Orchestrating agents built <strong>agency, not just efficiency</strong>. On the other hand, treating agents as a memorable, human-like unit of information <strong>showcases pros and cons</strong>. <a href="#discussion">See the discussion →</a></li> -->
       </ul>
     </div>
   </section>
+
+    <!-- DEMO VIDEO -->
+    <section class="wrap" id="video">
+      <!-- <p class="eyebrow">Demo Video</p> -->
+      <h2>Demo Video</h2>
+      <p class="prose">
+        Play the video to see how ChoiceMates works!
+      </p>
+      <div class="fig-img" style="aspect-ratio:16/9; padding:0;">
+        <iframe
+          style="width:100%; height:100%; border:0;"
+          src="https://www.youtube-nocookie.com/embed/ABIRlexYOPY?start=38"
+          title="ChoiceMates demo video"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
 
   <!-- ABSTRACT -->
   <section class="wrap" id="abstract">
@@ -119,51 +139,35 @@
     </p>
   </section>
 
-  <!-- DEMO VIDEO -->
-  <section class="wrap" id="video">
-    <p class="eyebrow">Video</p>
-    <h2>Overview video of the system</h2>
-    <div class="fig-img" style="aspect-ratio:16/9; padding:0;">
-      <iframe
-        style="width:100%; height:100%; border:0;"
-        src="https://www.youtube-nocookie.com/embed/ABIRlexYOPY"
-        title="ChoiceMates demo video"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
-  </section>
+
 
   <!-- WHY MULTI-AGENT -->
   <section class="wrap" id="motivation">
     <p class="eyebrow">The gap</p>
     <h2>Comparing perspectives</h2>
     <p class="prose">
-      Existing tools each solve part of the problem. Comparison-table tools like Mesh and Unakite
-      help organize criteria and options, but assume the user already knows what to compare.
-      Sensemaking tools like Selenite give a broad overview of a domain, but still leave users to
-      work out how it applies to their own situation. Recommenders skip ahead to an answer, which
-      novices can't sanity-check without the domain knowledge they're still building. Left with
-      these gaps, unfamiliar decisions tend toward information overload — and often end in choices
-      people don't feel confident about, or abandon entirely.
+      Understanding an unfamiliar domain means assembling scattered sources yourself, one at
+      a time. Multiple agents can surface diverse viewpoints in parallel, and conversation makes
+      follow-up questions cheap.
     </p>
 
     <div class="compare">
-      <div class="col today">
+      <div class="col">
         <div class="label">Today</div>
         <ul>
-          <li>Comparison tables — you have to already know the criteria</li>
-          <li>Sensemaking tools — a broad overview, disconnected from your situation</li>
-          <li>Recommenders — a fast answer, with nothing to check it against</li>
+          <li>Review blog</li>
+          <li>YouTube review</li>
+          <li>Product grid</li>
+          <li>Forum thread</li>
         </ul>
+        ...and if these don't work out, need to reach out to an expert.
       </div>
       <div class="rule"></div>
       <div class="col">
         <div class="label">ChoiceMates</div>
         <ul>
-          <li>Multiple agents, each a distinct lived perspective, surfaced in parallel</li>
-          <li>Conversational follow-ups build understanding and preferences together</li>
+          <li>Alex, Jamie, Taylor, and more agents, each bringing a lived perspective</li>
+          <li>All visible and askable at once, in one conversation</li>
         </ul>
       </div>
     </div>
@@ -179,10 +183,10 @@
     <p class="eyebrow">From a 14-participant formative study</p>
     <h2>Design goals</h2>
     <ul class="dg-list">
-      <li><span class="dg-id">DG1</span> Provide diverse opinions and perspectives in the domain through agents' distinct experiences.</li>
-      <li><span class="dg-id">DG2</span> Let users switch between broad domain exploration and information relevant to their own situation.</li>
-      <li><span class="dg-id">DG3</span> Support direct, conversational follow-ups as new questions come up mid-exploration.</li>
-      <li><span class="dg-id">DG4</span> Help users build personalized preferences instead of assuming they arrive with well-formed ones.</li>
+      <li><span class="dg-id">DG1</span><span>Provide diverse opinions and perspectives in the domain <span class="dg-highlight">through experiences</span>.</span></li>
+      <li><span class="dg-id">DG2</span><span>Provide <span class="dg-highlight">options to explore</span> broad and contextually relevant domain information.</span></li>
+      <li><span class="dg-id">DG3</span><span>Allow for <span class="dg-highlight">direct exchanges of information needs</span> through conversational interactions.</span></li>
+      <li><span class="dg-id">DG4</span><span>Facilitate users in <span class="dg-highlight">building preferences</span> relative to the domain.</span></li>
     </ul>
   </section>
 
@@ -229,7 +233,7 @@
         <img src="assets/fig4-orchestrate.png" alt="Figure 4: three types of conversation interactions — chat with all agents, tag a subset, and call new agents into the space" />
       </div>
       <p>
-        <strong>Figure 4.</strong> Users can chat with any agents currently in the space, select
+        Users can chat with any agents currently in the space, select
         specific agents to respond, or call new agents in. Agents can also respond to each other —
         agreeing, disagreeing, or asking follow-up questions — including when the user asks them to
         debate.
@@ -252,11 +256,16 @@
     <div class="figure-block">
       <!-- <span class="dg-id">DG2 · DG4</span> -->
       <h3><span class="region-num">3</span>Preference space</h3>
+      <p>
+        This is where saved agents, <span class="tag">criteria</span>, and <span class="tag option">options</span>
+        live — pinned from the conversation history, each with a short note the user can add
+        to capture why it mattered.
+      </p>
       <div class="fig-img">
         <img src="assets/fig6-toggle.png" alt="Figure 5: consequences of the preference toggle, showing the same question producing generic vs. preference-aligned agent responses" />
       </div>
       <p>
-        <strong>Figure 6.</strong> With the toggle <strong>off (1)</strong>, the preference space is
+        With the toggle <strong>off (1)</strong>, the preference space is
         hidden from agents and "any other agents?" returns generic newcomers. With it
         <strong>on (2)</strong>, the same question returns agents aligned to the criteria and
         options already pinned — the broad ↔ relevant switch from DG2.
